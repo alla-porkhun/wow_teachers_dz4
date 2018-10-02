@@ -1,0 +1,13 @@
+<svg>
+  <style>
+    #line {stroke:gray; stroke-width:3px; fill:none;}
+  </style>
+  <symbol id="line">
+    <path d="M5 70 C 30 0, 60 0, 80 40 S 130 80, 155 10"/>
+  </symbol>
+  <g>
+    <use xlink:href="#line"/>
+    <use xlink:href="#line" y="25"/>
+    <use xlink:href="#line" y="50"/>
+  </g>  
+</svg>
