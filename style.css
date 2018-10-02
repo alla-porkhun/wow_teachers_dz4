@@ -1,0 +1,158 @@
+.body {
+	font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	color: rgba(21, 21, 21, 0.7);
+	
+}
+
+.animated {
+	animation-duration: 500ms;
+	animation-fill-mode: both;
+	opacity: 1;
+}
+
+@keyframes slideInUp {
+ 0% {
+  transform: translate3d(0, 100%, 0);
+  visibility: visible;
+ }
+ 100% {
+  transform: translate3d(0, 0, 0);
+ }
+}
+
+.slideInUp {
+	visibility: visible;
+	animation-name: slideInUp;
+	animation-delay: 0.1s;
+}
+
+@keyframes slideInDown {
+ 0% {
+  transform: translate3d(0, -100%, 0);
+  visibility: visible;
+ }
+ 100% {
+  transform: translate3d(0, 0, 0);
+ }
+}
+
+.slideInDown {
+	visibility: visible; 
+	animation-name: slideInDown;
+	animation-delay: 0.1s;
+}
+
+
+.container {
+	height: 95vh;
+
+}
+.row {
+	height: 10vh;
+	min-height: 70px;
+}
+
+.col {
+	right: 10px;
+}
+.u-c {
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+	font-size: 30px;
+}
+
+.navbar-nav {
+	display: flex;
+	justify-content: space-around;
+}
+
+/*.navbar-toggler {
+	background: #eca41300!important;
+	border-radius: 50%;
+}*/
+
+.row2 {
+	display: flex;
+	height: 90vh;
+	max-height: 500px;
+	position: relative;
+
+}
+
+.text {
+	display: block;
+}
+.big_image {
+	width: calc(60% + 150px);
+	background-image: url(fon2.jpg); 
+	box-sizing: border-box;
+	position: absolute;
+	/*background-position: 80% 50%;*/
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.big_image::before {
+	position: absolute;
+	content: '';
+	background: url("back2.png") no-repeat right;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: contain;
+}
+
+.text {
+	position: absolute;
+	height: 500px;
+	font-size: 30px;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h4 {
+	color: #a23231;
+	font-weight: 500;
+	font-size: 28px;
+	font-family: "Mistral", Cursive;
+}
+
+h1 {
+	font-weight: 800;
+}
+
+h3 {
+	font-family: "Century Gothic", sans-serif;
+	font-weight: 500;
+}
+
+@media (max-width : 992px) {
+	.big_image {
+		width: 100%;
+		left: auto;
+	}
+   	
+   	.big_image::before {
+		background: none;
+	}	
+	.text {
+		top: 20%;
+	}
+
+	.fon {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 20px;
+	}
+}
+
